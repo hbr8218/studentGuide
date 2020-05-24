@@ -11,8 +11,8 @@ There are two heroku apps, one for staging and another for production using the 
 `heroku create studentguide-pro` <br />
 `heroku create studentguide-stage`
 #### Add Heroku apps to git remote
-`git remote add pro git@heroku.com:studentguide-pro` <br />
-`git remote add stage git@heroku.com:studentguide-stage` <br />
+`git remote add pro https://git.heroku.com/studentguide-pro.git` <br />
+`git remote add stage https://git.heroku.com/studentguide-stage.git` <br />
 Further, we will able to push our apps live to heroku. <br />
 - For staging: git push stage master
 - For production: git push pro master

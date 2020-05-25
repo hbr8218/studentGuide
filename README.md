@@ -16,3 +16,12 @@ There are two heroku apps, one for staging and another for production using the 
 Further, we will able to push our apps live to heroku. <br />
 - For staging: git push stage master
 - For production: git push pro master
+## Config Setting
+### Local Setting
+To set up our application with environment variables, we’re going to use autoenv. This program allows us to set commands that will run every time we cd into our directory. In order to use it, we will need to install it globally. First, exit out of your virtual environment in the terminal, install autoenv, then and add a .env file and the following: <br />
+`source your_virtual_env_path/bin/activate` <br />
+`export APP_SETTING="Config.DevelopmentConfig"`
+### Heroku Setting
+Similarly, Set environment variables on Heroku. <br />
+- For Staging: heroku config:set APP_SETTINGS=config.StagingConfig --remote stage
+- For Production: heroku config:set APP_SETTINGS=config.ProductionConfig --remote pro

@@ -13,7 +13,6 @@ manager.add_command('db', MigrateCommand)
 
 # Import all database Models
 from models import *
-db.create_all()
 
 # user commands
 @manager.command

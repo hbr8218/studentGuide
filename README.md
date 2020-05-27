@@ -25,3 +25,23 @@ To set up our application with environment variables, we’re going to use autoe
 Similarly, Set environment variables on Heroku. <br />
 - For Staging: heroku config:set APP_SETTINGS=config.StagingConfig --remote stage
 - For Production: heroku config:set APP_SETTINGS=config.ProductionConfig --remote pro
+## Setting up Database(Postgresql)
+Since Heroku use postgresql.
+To get started, install postgersql if you don't have already so that it would be easier for us to deploy on heroku. Create a database named studentguidedb with following tables:- <br />
+1. Registration table
+2. Login table
+#### Local Migration
+We are going to use Alembic, which is part of Flask-Migrate, to manage database migrations to update a database’s schema. <br />
+To create the migrations folder in the project's root directory:- <br />
+`python manage.py db init` <br />
+To manage database migration:- <br />
+`python manage.py db migrate` <br />
+To commit detected changes:- <br />
+`python manage.py db upgrade` <br />
+#### Remote Migration 
+Let's apply the migration on the databases on Heroku. <br />
+- Add a postgress addon to the staging server <br />
+`heroku addons:create heroku-postgresql:hobby-dev --app studentguide-stage` <br />
+- Add a postgress addon to the production server <br />
+`heroku addons:create heroku-postgresql:hobby-dev --app studentguide-pro` <br />
+Note: hobby-dev is the free tier of the Heroku postgres addon. <br />

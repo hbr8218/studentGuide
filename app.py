@@ -9,7 +9,7 @@ db = SQLAlchemy(app)
 
 @app.route('/')
 def index():
-    return "This is webapp for students,Deployed with {} and db_uri is {}".format(os.environ.get('APP_SETTINGS'),os.environ.get('DATABASE_URI'))
+    return "This is webapp for students,Deployed with {} and db_uri is {}".format(os.environ.get('APP_SETTINGS'),os.environ.get('DATABASE_URL'))
 
 if __name__ == '__main__':
     app.run()

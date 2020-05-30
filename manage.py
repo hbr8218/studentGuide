@@ -11,9 +11,6 @@ manager = Manager(app)
 
 manager.add_command('db', MigrateCommand)
 
-# Import all database Models
-from models import *
-
 # user commands
 @manager.command
 def run():

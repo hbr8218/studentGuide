@@ -1,4 +1,6 @@
 import os
+from sqlalchemy.dialects.postgresql import psycopg2
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 

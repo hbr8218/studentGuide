@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 import os
 
@@ -11,8 +11,13 @@ from models import *
 
 @app.route('/')
 def index():
-    os.environ['APP_SETTINGS']
-    return "This is webapp for students,Deployed with {} and\n db_uri is {}".format(os.environ.get('APP_SETTINGS'),os.environ.get('DATABASE_URL'))
+    # print(os.environ['APP_SETTINGS'])
+    # ,env=os.environ.get('APP_SETTINGS'), db=os.environ.get('DATABASE_URL')
+    return render_template('chat.html')
+
+@app.route('/a')
+def a():
+    return render_template('test.html')
 
 if __name__ == '__main__':
     app.run()

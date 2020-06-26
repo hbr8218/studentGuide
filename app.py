@@ -13,7 +13,7 @@ from models import *
 def index():
     # print(os.environ['APP_SETTINGS'])
     # ,env=os.environ.get('APP_SETTINGS'), db=os.environ.get('DATABASE_URL')
-    return render_template('chat.html')
+    return render_template('login.html')
 
 @app.route('/a')
 def a():

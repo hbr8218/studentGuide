@@ -16,7 +16,7 @@
      </title> 
      {% block css_block %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/layout.css')}}">
     <!-- responsive page -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      {% endblock css_block %}
@@ -24,17 +24,28 @@
 </head>
 <body>
    <div class="Home">
-    <div class="Header">Student web</div>
+    <div class="Header">
+        <h1>Data App</h1>
+    </div>
      
      {% block content %}
-     <div class="Interview">
+    
+     <!-- <div class="Interview">
         <a href="https://towardsdatascience.com/80-python-interview-practice-questions-f1640eea66ac"> Python interview questions</a>
-    </div>
+    </div> -->
      {% endblock content %}
          
-    <footer class="bottom">
-     @copyright this is footer
-    </footer>
+    <!-- Footer -->
+<footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+      <a href="https://google.com/">© 2020 Copyright:dataap.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
     </div>
         
     {% block all_js %}

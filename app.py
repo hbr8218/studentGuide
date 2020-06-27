@@ -16,7 +16,7 @@ def index():
     return render_template('layout.html')
 
 @app.route('/home')
-def login():
+def home():
     return render_template('home.html')
 
 @app.route('/a')

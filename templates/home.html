@@ -1,6 +1,14 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    this s home page 
+<div id="title">
+    <p>Welcome to the world of Data's Apps</p>
+</div> 
 {% endblock content %}
+
+{% block css_block %}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+{% endblock css_block %}
+    
     

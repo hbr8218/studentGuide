@@ -1,0 +1,1 @@
+<div class="create-acc"><p>Email:</p> <br><input type="text" name="email"> <br><p>Confirm Email</p> <br><input type="text"> <br><p>Password:</p> <br><input type="password" name="pwd" id=""> <br><p>Confirm Password</p> <br><input type="password"> <br><button type="submit">Create account</button></div>

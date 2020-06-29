@@ -13,15 +13,23 @@ from models import *
 def index():
     # print(os.environ['APP_SETTINGS'])
     # ,env=os.environ.get('APP_SETTINGS'), db=os.environ.get('DATABASE_URL')
-    return render_template('layout.html')
-
-@app.route('/home')
-def home():
     return render_template('home.html')
 
-@app.route('/a')
-def a():
-    return render_template('test.html')
+@app.route('/signin')
+def signIn():
+    return render_template('signin.html')
+
+@app.route('/signup')
+def signUp():
+    return render_template('signup.html')
+
+@app.route('/forgot')
+def forgot():
+    return render_template('forgot.html')
+
+@app.route('/contents')
+def contents():
+    return render_template('contents.html')
 
 if __name__ == '__main__':
     app.run()
